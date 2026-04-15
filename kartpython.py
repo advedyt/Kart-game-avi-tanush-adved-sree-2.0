@@ -7,7 +7,7 @@ screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
 
 my_font = pygame.font.SysFont("Arial", 28, bold=1)
-display_speed = 0
+
 # Kart Variables
 kart_img = pygame.Surface((40, 20), pygame.SRCALPHA)
 pygame.draw.rect(kart_img, (255, 0, 0), (0, 0, 40, 20)) # Red Kart
@@ -19,7 +19,6 @@ max_speed = 5
 acceleration = 0.1
 friction = 0.05
 steering = 4
-
 running = True
 while running:
     screen.fill((50, 150, 50)) # Grass background
@@ -61,7 +60,7 @@ while running:
     rotated_kart = pygame.transform.rotate(kart_img, angle)
     new_rect = rotated_kart.get_rect(center=(x, y))
     screen.blit(rotated_kart, new_rect.topleft)
-
+    display_speed = speed
     pygame.display.flip()
     clock.tick(60)
     # Inside your main loop:
