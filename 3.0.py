@@ -24,6 +24,9 @@ while menu:
         # 1. Define the button area
         button_rect = pygame.Rect(300, 250, 150, 50)
         button2 = pygame.Rect(600, 250, 150, 50)
+        t1_font = arial_font.render("Track1", True, (255, 255, 0))
+        t2_font = arial_font.render("Track2", True, (255, 255, 0))
+               
         # 2. Get mouse data
         mouse_pos = pygame.mouse.get_pos()
         mouse_click = pygame.mouse.get_pressed()
@@ -39,6 +42,7 @@ while menu:
         else:         
             color = (150, 0, 0) # Dark red
         pygame.draw.rect(screen, color, button_rect)
+        screen.blit(t1_font, t1_font.get_rect(center=button_rect.center))
         if button2.collidepoint(mouse_pos):
             color2 = (0,0,200)
             if mouse_click[0]:
@@ -48,6 +52,7 @@ while menu:
         else:
             color2 = (0,0,150)
         pygame.draw.rect(screen, color2, button2 )
+        screen.blit(t2_font,t2_font.get_rect(center=button2.center))
 
     pygame.display.flip()
     clock.tick(60)
@@ -87,7 +92,7 @@ while running:
         #pygame.draw.ellipse(screen, (50, 150, 50), [150, 150, 800, 400])
         pygame.draw.rect(screen, (255, 255, 255), [400, 50, 40, 100])
     elif click and "RACE_TRACK2" in game_state:
-        screen.fill((50,150,50))
+        screen.fill((50, 150, 50))
         pygame.draw.ellipse(screen,(100, 100, 100), (50, 50, 900, 500))
         pygame.draw.ellipse(screen, (50, 150, 50), [150, 150, 700, 300])
         pygame.draw.rect(screen, (255, 255, 255), [400, 50, 40, 100])
