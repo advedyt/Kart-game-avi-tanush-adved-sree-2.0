@@ -87,6 +87,7 @@ while running:
         #pygame.draw.ellipse(screen, (50, 150, 50), [150, 150, 800, 400])
         pygame.draw.rect(screen, (255, 255, 255), [400, 50, 40, 100])
     elif click and "RACE_TRACK2" in game_state:
+        screen.fill((50,150,50))
         pygame.draw.ellipse(screen,(100, 100, 100), (50, 50, 900, 500))
         pygame.draw.ellipse(screen, (50, 150, 50), [150, 150, 700, 300])
         pygame.draw.rect(screen, (255, 255, 255), [400, 50, 40, 100])
