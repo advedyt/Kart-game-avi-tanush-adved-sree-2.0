@@ -11,14 +11,6 @@ my_font = pygame.font.SysFont("Arial", 28, bold=1)
 # Kart 
 kart_img = pygame.Surface((40, 20), pygame.SRCALPHA)
 pygame.draw.rect(kart_img, (255, 0, 0), (0, 0, 40, 20)) # Red Kart
-# kartimg
-# Load your image
-#kart_img = pygame.image.load("kart.png").convert_alpha()
-#kart_img = pygame.transform.scale(screen, (30,50))
-
-
-# If the image is too big, resize it!
-
 
 x, y = 400, 100
 angle = 0
